@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F80297592E02082A007A1F94 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = F80297582E02082A007A1F94 /* ComposableArchitecture */; };
+		F80297662E020D69007A1F94 /* GraphqlAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F80297652E020D69007A1F94 /* GraphqlAPI */; };
+		F84E6E552E01FA5400271C20 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = F84E6E542E01FA5400271C20 /* Apollo */; };
+		F84E6E572E01FA5400271C20 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F84E6E562E01FA5400271C20 /* ApolloAPI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F84E6E342E01F9AD00271C20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -14,22 +21,42 @@
 			remoteGlobalIDString = F84E6E252E01F9AC00271C20;
 			remoteInfo = SchwiftyTCA;
 		};
-		F84E6E3E2E01F9AD00271C20 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F84E6E1E2E01F9AC00271C20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F84E6E252E01F9AC00271C20;
-			remoteInfo = SchwiftyTCA;
-		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F80297492E02002C007A1F94 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F802983F2E03BF28007A1F94 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F802974B2E02002C007A1F94 /* SchwiftyTCACLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SchwiftyTCACLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84E6E262E01F9AC00271C20 /* SchwiftyTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchwiftyTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84E6E332E01F9AD00271C20 /* SchwiftyTCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchwiftyTCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F84E6E3D2E01F9AD00271C20 /* SchwiftyTCAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchwiftyTCAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		F802974C2E02002C007A1F94 /* SchwiftyTCACLI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SchwiftyTCACLI;
+			sourceTree = "<group>";
+		};
 		F84E6E282E01F9AC00271C20 /* SchwiftyTCA */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SchwiftyTCA;
@@ -40,18 +67,24 @@
 			path = SchwiftyTCATests;
 			sourceTree = "<group>";
 		};
-		F84E6E402E01F9AD00271C20 /* SchwiftyTCAUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SchwiftyTCAUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F80297482E02002C007A1F94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F84E6E232E01F9AC00271C20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F84E6E572E01FA5400271C20 /* ApolloAPI in Frameworks */,
+				F84E6E552E01FA5400271C20 /* Apollo in Frameworks */,
+				F80297592E02082A007A1F94 /* ComposableArchitecture in Frameworks */,
+				F80297662E020D69007A1F94 /* GraphqlAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,22 +95,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F84E6E3A2E01F9AD00271C20 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F80297642E020D69007A1F94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F84E6E1D2E01F9AC00271C20 = {
 			isa = PBXGroup;
 			children = (
+				F802974C2E02002C007A1F94 /* SchwiftyTCACLI */,
 				F84E6E282E01F9AC00271C20 /* SchwiftyTCA */,
 				F84E6E362E01F9AD00271C20 /* SchwiftyTCATests */,
-				F84E6E402E01F9AD00271C20 /* SchwiftyTCAUITests */,
+				F80297642E020D69007A1F94 /* Frameworks */,
 				F84E6E272E01F9AC00271C20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +121,7 @@
 			children = (
 				F84E6E262E01F9AC00271C20 /* SchwiftyTCA.app */,
 				F84E6E332E01F9AD00271C20 /* SchwiftyTCATests.xctest */,
-				F84E6E3D2E01F9AD00271C20 /* SchwiftyTCAUITests.xctest */,
+				F802974B2E02002C007A1F94 /* SchwiftyTCACLI */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +129,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F802974A2E02002C007A1F94 /* SchwiftyTCACLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F802974F2E02002C007A1F94 /* Build configuration list for PBXNativeTarget "SchwiftyTCACLI" */;
+			buildPhases = (
+				F80297472E02002C007A1F94 /* Sources */,
+				F80297482E02002C007A1F94 /* Frameworks */,
+				F80297492E02002C007A1F94 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F802974C2E02002C007A1F94 /* SchwiftyTCACLI */,
+			);
+			name = SchwiftyTCACLI;
+			packageProductDependencies = (
+			);
+			productName = SchwiftyTCACLI;
+			productReference = F802974B2E02002C007A1F94 /* SchwiftyTCACLI */;
+			productType = "com.apple.product-type.tool";
+		};
 		F84E6E252E01F9AC00271C20 /* SchwiftyTCA */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F84E6E472E01F9AD00271C20 /* Build configuration list for PBXNativeTarget "SchwiftyTCA" */;
@@ -102,6 +158,7 @@
 				F84E6E222E01F9AC00271C20 /* Sources */,
 				F84E6E232E01F9AC00271C20 /* Frameworks */,
 				F84E6E242E01F9AC00271C20 /* Resources */,
+				F802983F2E03BF28007A1F94 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -112,6 +169,10 @@
 			);
 			name = SchwiftyTCA;
 			packageProductDependencies = (
+				F84E6E542E01FA5400271C20 /* Apollo */,
+				F84E6E562E01FA5400271C20 /* ApolloAPI */,
+				F80297582E02082A007A1F94 /* ComposableArchitecture */,
+				F80297652E020D69007A1F94 /* GraphqlAPI */,
 			);
 			productName = SchwiftyTCA;
 			productReference = F84E6E262E01F9AC00271C20 /* SchwiftyTCA.app */;
@@ -140,29 +201,6 @@
 			productReference = F84E6E332E01F9AD00271C20 /* SchwiftyTCATests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F84E6E3C2E01F9AD00271C20 /* SchwiftyTCAUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F84E6E4D2E01F9AD00271C20 /* Build configuration list for PBXNativeTarget "SchwiftyTCAUITests" */;
-			buildPhases = (
-				F84E6E392E01F9AD00271C20 /* Sources */,
-				F84E6E3A2E01F9AD00271C20 /* Frameworks */,
-				F84E6E3B2E01F9AD00271C20 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F84E6E3F2E01F9AD00271C20 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F84E6E402E01F9AD00271C20 /* SchwiftyTCAUITests */,
-			);
-			name = SchwiftyTCAUITests;
-			packageProductDependencies = (
-			);
-			productName = SchwiftyTCAUITests;
-			productReference = F84E6E3D2E01F9AD00271C20 /* SchwiftyTCAUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -173,14 +211,13 @@
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
+					F802974A2E02002C007A1F94 = {
+						CreatedOnToolsVersion = 16.3;
+					};
 					F84E6E252E01F9AC00271C20 = {
 						CreatedOnToolsVersion = 16.3;
 					};
 					F84E6E322E01F9AD00271C20 = {
-						CreatedOnToolsVersion = 16.3;
-						TestTargetID = F84E6E252E01F9AC00271C20;
-					};
-					F84E6E3C2E01F9AD00271C20 = {
 						CreatedOnToolsVersion = 16.3;
 						TestTargetID = F84E6E252E01F9AC00271C20;
 					};
@@ -195,6 +232,10 @@
 			);
 			mainGroup = F84E6E1D2E01F9AC00271C20;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F84E6E532E01FA5400271C20 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				F80297572E02082A007A1F94 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F84E6E272E01F9AC00271C20 /* Products */;
 			projectDirPath = "";
@@ -202,7 +243,7 @@
 			targets = (
 				F84E6E252E01F9AC00271C20 /* SchwiftyTCA */,
 				F84E6E322E01F9AD00271C20 /* SchwiftyTCATests */,
-				F84E6E3C2E01F9AD00271C20 /* SchwiftyTCAUITests */,
+				F802974A2E02002C007A1F94 /* SchwiftyTCACLI */,
 			);
 		};
 /* End PBXProject section */
@@ -222,16 +263,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F84E6E3B2E01F9AD00271C20 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F80297472E02002C007A1F94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
 		F84E6E222E01F9AC00271C20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,13 +287,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F84E6E392E01F9AD00271C20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -261,14 +295,35 @@
 			target = F84E6E252E01F9AC00271C20 /* SchwiftyTCA */;
 			targetProxy = F84E6E342E01F9AD00271C20 /* PBXContainerItemProxy */;
 		};
-		F84E6E3F2E01F9AD00271C20 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F84E6E252E01F9AC00271C20 /* SchwiftyTCA */;
-			targetProxy = F84E6E3E2E01F9AD00271C20 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		F80297502E02002C007A1F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L944VJ78VR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F80297512E02002C007A1F94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L944VJ78VR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F84E6E452E01F9AD00271C20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -484,43 +539,18 @@
 			};
 			name = Release;
 		};
-		F84E6E4E2E01F9AD00271C20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L944VJ78VR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.swiftgraph.SchwiftyTCAUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SchwiftyTCA;
-			};
-			name = Debug;
-		};
-		F84E6E4F2E01F9AD00271C20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L944VJ78VR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.swiftgraph.SchwiftyTCAUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SchwiftyTCA;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F802974F2E02002C007A1F94 /* Build configuration list for PBXNativeTarget "SchwiftyTCACLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80297502E02002C007A1F94 /* Debug */,
+				F80297512E02002C007A1F94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F84E6E212E01F9AC00271C20 /* Build configuration list for PBXProject "SchwiftyTCA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -548,16 +578,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F84E6E4D2E01F9AD00271C20 /* Build configuration list for PBXNativeTarget "SchwiftyTCAUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F84E6E4E2E01F9AD00271C20 /* Debug */,
-				F84E6E4F2E01F9AD00271C20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F80297572E02082A007A1F94 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.20.2;
+			};
+		};
+		F84E6E532E01FA5400271C20 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.22.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F80297582E02082A007A1F94 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F80297572E02082A007A1F94 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		F80297652E020D69007A1F94 /* GraphqlAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GraphqlAPI;
+		};
+		F84E6E542E01FA5400271C20 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F84E6E532E01FA5400271C20 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		F84E6E562E01FA5400271C20 /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F84E6E532E01FA5400271C20 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F84E6E1E2E01F9AC00271C20 /* Project object */;
 }

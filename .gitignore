@@ -1,0 +1,16 @@
+# Build and Derived Data
+build/
+DerivedData/
+
+# User Specific
+.xcuserstate
+.xcworkspace
+.xcodeproj/project.xcworkspace/
+.xcuserdata/
+
+# Dependency Manager
+.swiftpm/ # Optional
+
+# System Files and IDE Metadata
+.DS_Store
+*.swp
