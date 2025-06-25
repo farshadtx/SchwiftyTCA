@@ -11,6 +11,7 @@ enum GraphQLClientError: Error, Equatable {
 protocol GraphQLClientProtocol {
     func fetchCharacters(page: Int) async throws -> PaginatedCharacters
     func fetchCharacterDetails(id: String) async throws -> CharacterDetails
+    func fetchEpisodeDetails(id: String) async throws -> EpisodeDetails
 }
 
 final class GraphQLClient: GraphQLClientProtocol {
@@ -43,6 +44,19 @@ final class GraphQLClient: GraphQLClientProtocol {
         }
         return characterDetails
     }
+
+    func fetchEpisodeDetails(id: String) async throws -> EpisodeDetails {
+        let query = GetEpisodeQuery(id: id)
+        let result = try await apollo.fetchAsync(query: query)
+        guard
+            let data = result.data,
+            let episodeData = data.episode,
+            let episodeDetails = EpisodeDetails(from: episodeData)
+        else {
+            throw GraphQLClientError.noData
+        }
+        return episodeDetails
+    }
 }
 
 final class PreviewGraphQLClient: GraphQLClientProtocol {
@@ -51,6 +65,10 @@ final class PreviewGraphQLClient: GraphQLClientProtocol {
     }
 
     func fetchCharacterDetails(id: String) async throws -> CharacterDetails {
+        .mock
+    }
+
+    func fetchEpisodeDetails(id: String) async throws -> EpisodeDetails {
         .mock
     }
 }

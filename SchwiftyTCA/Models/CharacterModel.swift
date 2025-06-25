@@ -32,6 +32,20 @@ struct CharacterModel: Identifiable, Equatable {
         self.image = image
         self.status = status
     }
+
+    init?(from raw: GetEpisodeQuery.Data.Episode.Character?) {
+        guard
+            let id = raw?.id,
+            let name = raw?.name,
+            let image = raw?.image,
+            let status = raw?.status
+        else { return nil }
+
+        self.id = id
+        self.name = name
+        self.image = image
+        self.status = status
+    }
 }
 
 extension CharacterModel {

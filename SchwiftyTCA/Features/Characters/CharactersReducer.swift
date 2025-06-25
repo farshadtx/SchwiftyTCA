@@ -19,6 +19,7 @@ struct CharactersReducer {
         case charactersResponseSuccess(PaginatedCharacters)
         case charactersResponseFailure(GraphQLClientError)
         case characterCardTapped(CharacterModel)
+        case episodeCardTapped(Episode)
     }
 
     var body: some ReducerOf<Self> {
@@ -54,6 +55,9 @@ struct CharactersReducer {
                     return .none
 
                 case .characterCardTapped:
+                    return .none
+
+                case .episodeCardTapped:
                     return .none
             }
         }

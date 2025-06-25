@@ -1,4 +1,5 @@
 import SwiftUI
+import ComposableArchitecture
 
 struct DynamicCharacterDetailsSection: View {
     let isLoading: Bool
@@ -20,24 +21,36 @@ struct DynamicCharacterDetailsSection: View {
                     .padding(.top)
 
                 ForEach(character.episodes) { episode in
-                    EpisodeCardView(episode: episode)
+                    NavigationLink(
+                        state: MainReducer.Path.State.episodeDetails(.init(episode: episode))
+                    ) {
+                        EpisodeCardView(episode: episode)
+                    }
                 }
             }
         }
     }
 }
 
-#Preview("Loading") {
-    DynamicCharacterDetailsSection(
-        isLoading: true,
-        characterDetails: nil
-    )
-}
-
-
-#Preview("Loaded") {
-    DynamicCharacterDetailsSection(
-        isLoading: false,
-        characterDetails: CharacterDetails.mock
-    )
-}
+//#Preview("Loading") {
+//    DynamicCharacterDetailsSection(
+//        store: .init(
+//            initialState: CharacterDetailsReducer.State(character: .mock),
+//            reducer: {
+//                CharacterDetailsReducer()
+//            }
+//        )
+//    )
+//}
+//
+//
+//#Preview("Loaded") {
+//    DynamicCharacterDetailsSection(
+//        store: .init(
+//            initialState: CharacterDetailsReducer.State(character: .mock),
+//            reducer: {
+//                CharacterDetailsReducer()
+//            }
+//        )
+//    )
+//}

@@ -7,6 +7,7 @@ struct MainReducer {
     @Reducer
     enum Path {
         case characterDetails(CharacterDetailsReducer)
+        case episodeDetails(EpisodeDetailsReducer)
     }
     
     @ObservableState
@@ -32,6 +33,10 @@ struct MainReducer {
                     state.path.append(
                         .characterDetails(.init(character: character)))
                     return .none
+//                case let .characters(.episodeTapped(episode)):
+//                    state.path.append(
+//                        .characterDetails(.init(character: character)))
+//                    return .none
                 case .path:
                     return .none
                 case .characters:

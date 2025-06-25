@@ -1,27 +1,21 @@
 import SwiftUI
 
 struct EpisodeCardView: View {
-    let episode: CharacterDetails.Episode
+    let episode: Episode
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        HStack {
             Text(episode.name)
                 .fontWeight(.medium)
 
-            HStack {
-                Text(episode.episode)
-                    .font(.caption)
-                    .bold()
-                    .foregroundColor(.secondary)
+            Spacer()
 
-                Spacer()
-
-                Text("Air date: \(episode.airDate)")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
+            Text(episode.episode)
+                .font(.caption)
+                .bold()
+                .foregroundColor(.secondary)
         }
-        .padding(8)
+        .padding()
         .background(Color(.secondarySystemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 8))
     }

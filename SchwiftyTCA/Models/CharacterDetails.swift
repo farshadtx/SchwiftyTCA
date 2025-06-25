@@ -2,34 +2,6 @@ import Foundation
 import GraphqlAPI
 
 struct CharacterDetails: Identifiable, Equatable {
-    struct Episode: Identifiable, Equatable {
-        let id: String
-        let name: String
-        let airDate: String
-        let episode: String
-
-        init(id: String, name: String, airDate: String, episode: String) {
-            self.id = id
-            self.name = name
-            self.airDate = airDate
-            self.episode = episode
-        }
-
-        init?(from raw: GetCharacterQuery.Data.Character.Episode?) {
-            guard
-                let id = raw?.id,
-                let name = raw?.name,
-                let airDate = raw?.air_date,
-                let episode = raw?.episode
-            else { return nil }
-
-            self.id = id
-            self.name = name
-            self.airDate = airDate
-            self.episode = episode
-        }
-    }
-
     let id: String
     let name: String
     let status: String
@@ -99,7 +71,7 @@ extension CharacterDetails {
 
 #if DEBUG
 extension CharacterDetails {
-    static let mock: Self = CharacterDetails(
+    static let mock: Self = .init(
         id: "1",
         name: "Rick Sanchez",
         status: "Alive",
@@ -110,15 +82,6 @@ extension CharacterDetails {
         episodes: [.mock],
         image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
         created: "2017-11-04T18:48:46.250Z"
-    )
-}
-
-extension CharacterDetails.Episode {
-    static let mock: Self = CharacterDetails.Episode(
-        id: "1",
-        name: "Pilot",
-        airDate: "2025-06-18",
-        episode: "S01 E01"
     )
 }
 #endif

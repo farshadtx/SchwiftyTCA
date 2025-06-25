@@ -2,7 +2,7 @@ import SwiftUI
 import ComposableArchitecture
 
 struct CharacterDetailsView: View {
-    let store: StoreOf<CharacterDetailsReducer>
+    @Bindable var store: StoreOf<CharacterDetailsReducer>
 
     var body: some View {
         ScrollView {

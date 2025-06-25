@@ -20,6 +20,9 @@ struct MainView: View {
             switch store.case {
                 case let .characterDetails(store):
                     CharacterDetailsView(store: store)
+                case let .episodeDetails(store):
+                    EpisodeDetailsView(store: store)
+
             }
         }
     }

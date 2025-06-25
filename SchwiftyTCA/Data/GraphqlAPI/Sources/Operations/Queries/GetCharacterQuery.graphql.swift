@@ -7,7 +7,7 @@ public class GetCharacterQuery: GraphQLQuery {
   public static let operationName: String = "GetCharacterQuery"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query GetCharacterQuery($id: ID!) { character(id: $id) { __typename id name status species gender origin { __typename name } location { __typename name } episode { __typename id name air_date episode } image created } }"#
+      #"query GetCharacterQuery($id: ID!) { character(id: $id) { __typename id name status species gender origin { __typename name } location { __typename name } episode { __typename id name episode } image created } }"#
     ))
 
   public var id: ID
@@ -120,7 +120,6 @@ public class GetCharacterQuery: GraphQLQuery {
           .field("__typename", String.self),
           .field("id", GraphqlAPI.ID?.self),
           .field("name", String?.self),
-          .field("air_date", String?.self),
           .field("episode", String?.self),
         ] }
 
@@ -128,8 +127,6 @@ public class GetCharacterQuery: GraphQLQuery {
         public var id: GraphqlAPI.ID? { __data["id"] }
         /// The name of the episode.
         public var name: String? { __data["name"] }
-        /// The air date of the episode.
-        public var air_date: String? { __data["air_date"] }
         /// The code of the episode.
         public var episode: String? { __data["episode"] }
       }
